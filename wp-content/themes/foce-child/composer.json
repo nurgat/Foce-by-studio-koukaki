@@ -1,0 +1,13 @@
+{
+    "name": "studio-koukaki/fleurs-dorangers-et-chats-errants",
+    "description": "Thème enfant pour WordPress à l'occasion de la nomination aux Oscars Shorts, inspiré par \"Fleurs d'oranger & Chats errants\".",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Studio Kouk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

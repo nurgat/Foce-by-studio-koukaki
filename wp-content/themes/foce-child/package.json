@@ -1,0 +1,29 @@
+{
+  "name": "foce-child",
+  "version": "1.0.0",
+  "description": "site internet de studio d’animation Koukaki, dont le dernier film a été nominé aux Oscars du meilleur court-métrage d’animation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurgat/Foce-by-studio-koukaki.git"
+  },
+  "keywords": [
+    "site",
+    "animation"
+  ],
+  "author": "studio koukaki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurgat/Foce-by-studio-koukaki/issues"
+  },
+  "homepage": "https://github.com/nurgat/Foce-by-studio-koukaki#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
+    "swiper": "^11.0.6"
+  }
+}
