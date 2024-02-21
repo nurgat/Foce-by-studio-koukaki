@@ -30,3 +30,14 @@ if ( get_stylesheet() !== get_template() ) {
         return get_option( 'theme_mods_' . get_template(), $default );
     } );
 }
+
+function foce_child_enqueue_scripts() {
+    // Assurez-vous que jQuery est chargé sur le site
+    wp_enqueue_script('jquery');
+    
+    // Ajoute votre script personnalisé avec jQuery comme dépendance
+    wp_enqueue_script('foce-child-animations', get_stylesheet_directory_uri() . '/animations.js', array('jquery'), '1.0.0', true);
+}
+
+// Ajoute l'action pour exécuter la fonction définie ci-dessus
+add_action('wp_enqueue_scripts', 'foce_child_enqueue_scripts');

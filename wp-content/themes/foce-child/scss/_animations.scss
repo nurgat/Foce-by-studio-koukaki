@@ -1,0 +1,12 @@
+// _animations.scss : Création d'un d'un fichier partiel SCSS pour les animations (Option recommandée) 
+
+/* Base pour les sections qui vont apparaitre avec un effet fade-in */
+.fade-in {
+    opacity: 0; /* Commence avec une opacité à 0 pour être invisible */
+    transition: opacity 1s ease-out; /* Transition douce pour l'opacité */
+  }
+  
+  /* Quand une section est dans le viewport, elle devient visible */
+  .fade-in.visible {
+    opacity: 1; /* Opacité complète = élément totalement visible */
+  }
