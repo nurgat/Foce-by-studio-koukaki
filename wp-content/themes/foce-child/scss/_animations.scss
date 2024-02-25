@@ -1,12 +1,62 @@
 // _animations.scss : Création d'un d'un fichier partiel SCSS pour les animations (Option recommandée) 
 
-/* Base pour les sections qui vont apparaitre avec un effet fade-in */
-.fade-in {
-    opacity: 0; /* Commence avec une opacité à 0 pour être invisible */
-    transition: opacity 1s ease-out; /* Transition douce pour l'opacité */
+/* Préparation initiale de l'élément pour l'animation */
+//.fade-in {
+  //  opacity: 0;
+  //  transform: translateY(50px);
+    
+//}
+
+  
+  /* État final de l'élément une fois qu'il est dans le viewport */
+  //.fade-in-visible {
+   // opacity: 1; /* Rend l'élément complètement opaque */
+   // transform: translateY(0); /* Ramène l'élément à sa position initiale */
+   // transition: 0.3s;
+  //}
+
+  .fade-in-section {
+    visibility: hidden;
+}
+
+  .fade-in-up {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    visibility: visible; /* Assurez-vous que l'élément est initialement caché */
   }
   
-  /* Quand une section est dans le viewport, elle devient visible */
-  .fade-in.visible {
-    opacity: 1; /* Opacité complète = élément totalement visible */
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(80px); /* Ajustez cette valeur selon l'effet désiré */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
+
+  .parallax{
+   
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+  }
+
+
+  
+
+  
+  
+
+  
+  
+  
+  
+
+
+
+  
