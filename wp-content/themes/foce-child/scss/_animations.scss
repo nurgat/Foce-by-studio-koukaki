@@ -40,11 +40,34 @@
 
   .parallax{
    
-    position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
   }
+
+  .story__article {
+    position: relative;
+    
+    // Pseudo-élément pour la fleur
+    &::after {
+      position: absolute;
+      left: 869px;
+      // Ajouter une animation de rotation
+      animation: rotateFlower 10s linear infinite;
+    }
+  }
+  
+  // Définition de l'animation keyframes
+  @keyframes rotateFlower {
+    from {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+      transform: translateX(-50%) rotate(360deg);
+    }
+  }
+  
+
 
 
   
