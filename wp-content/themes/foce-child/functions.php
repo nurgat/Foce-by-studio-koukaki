@@ -42,7 +42,10 @@ function foce_child_enqueue_scripts() {
     wp_enqueue_script('jquery');
     
     // Ajoute votre script personnalisé sans jQuery comme dépendance
-    wp_enqueue_script('foce-child-custom-js', get_stylesheet_directory_uri() . '/animations.js', array(), '1.0.0', true);
+    wp_enqueue_script('foce-child-animations-js', get_stylesheet_directory_uri() . '/js/animations.js', array(), '1.0.0', true);
+
+    // Ajoute custom.js
+    wp_enqueue_script('foce-child-custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 
     // Enregistre et met en file d'attente le fichier CSS compilé du thème enfant
     wp_enqueue_style('foce-child-style', get_stylesheet_directory_uri() . '/css/index.css', array(), '1.0.0');

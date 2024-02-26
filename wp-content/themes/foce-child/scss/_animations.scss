@@ -15,7 +15,7 @@
    // transition: 0.3s;
   //}
 
-  .fade-in-section {
+  /*.fade-in-section {
     visibility: hidden;
 }
 
@@ -23,54 +23,97 @@
     animation-name: fadeInUp;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    
     visibility: visible; /* Assurez-vous que l'élément est initialement caché */
-  }
-  
 
-  @keyframes fadeInUp {
+/* Appliquer le fade-up aux sections */
+
+@keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(80px); /* Ajustez cette valeur selon l'effet désiré */
+      transform: translateY(80px);
     }
     to {
       opacity: 1;
       transform: translateY(0);
     }
   }
-
-  .parallax{
-   
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
+  
+  .fade-in-section {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
+  
+      
+    /* Appliquer le fade-up aux titres h2 */
 
-  .story__article {
-    position: relative;
-    
-    // Pseudo-élément pour la fleur
+ /* Surcharge des styles des h2 pour ajouter un fond uniquement quand il y a un span */
+ h2.title-background {
+    position: relative; // Permet le positionnement absolu des pseudo-éléments par rapport à ce h2
+    margin-top: 30px;
+  
+    & > span {
+      display: block;
+      background-image: url('./assets/images/purple_title_bg.png'); // Ajustez le chemin selon votre structure
+      background-repeat: no-repeat;
+      background-size: contain;
+      text-align: center;
+      background-position: center;
+    }
+  
+    &::before {
+      position: absolute;
+      top: 120px;
+      left: -416px;
+      
+    }
+  
     &::after {
       position: absolute;
-      left: 869px;
-      // Ajouter une animation de rotation
-      animation: rotateFlower 10s linear infinite;
+      top: 377px;
+      left: -372.5px;
+      z-index: 2;
     }
   }
   
-  // Définition de l'animation keyframes
-  @keyframes rotateFlower {
-    from {
-      transform: translateX(-50%) rotate(0deg);
+  .story__article {
+    &::before {
+      position: absolute;
+      left: 722px;
+      top: 208px;
+      z-index: 1;
     }
-    to {
-      transform: translateX(-50%) rotate(360deg);
+  
+    &::after {
+      position: absolute;
+      right: 90px;
+      top: 139px;
+      z-index: 2;
+    }
+  }
+
+  #studio {
+    position: relative;
+  
+    h2 {
+      &::after {
+        position: absolute;
+        left: 1217px;
+        top: 107px;
+      }
+  
+      &::before {
+        position: absolute;
+        left: -68px;
+        top: 0;
+      }
     }
   }
   
+   
 
 
-
-  
 
   
   
