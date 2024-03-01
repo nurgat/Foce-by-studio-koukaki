@@ -11,24 +11,22 @@
         // Si on n'est pas en intersection, retirer la classe !
         entry.target.classList.remove('fade-in-section');
       });
-    }, { threshold: 0.1 }); // Vous pouvez ajuster le seuil selon les besoins
+    }, { threshold: 0.2 }); // Augmentation du seuil pour retarder l'activation
     
     // Sélectionner tous les éléments à observer
     document.querySelectorAll('.fade-in-trigger').forEach(section => {
       observer.observe(section); // Commence à observer les sections sélectionnées
     });
   });
-  
 
-  
+  /* Appliquer un effet de parallax avec l'image de la bannière et le logo */
 
+  let logoBanner = document.querySelector('.banner img')
   
+  window.addEventListener('scroll', () => {
 
+    let value = window.scrollY;
 
+    logoBanner.style.marginTop = value / 2.6 + "px";
 
-
-  
-  
-
-  
-  
+  });

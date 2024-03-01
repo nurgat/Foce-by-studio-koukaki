@@ -1,128 +1,36 @@
-// _animations.scss : Création d'un d'un fichier partiel SCSS pour les animations (Option recommandée) 
-
-/* Préparation initiale de l'élément pour l'animation */
-//.fade-in {
-  //  opacity: 0;
-  //  transform: translateY(50px);
-    
-//}
-
-  
-  /* État final de l'élément une fois qu'il est dans le viewport */
-  //.fade-in-visible {
-   // opacity: 1; /* Rend l'élément complètement opaque */
-   // transform: translateY(0); /* Ramène l'élément à sa position initiale */
-   // transition: 0.3s;
-  //}
-
-  /*.fade-in-section {
-    visibility: hidden;
-}
-
-  .fade-in-up {
-    animation-name: fadeInUp;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    
-    visibility: visible; /* Assurez-vous que l'élément est initialement caché */
+CSS:
 
 /* Appliquer le fade-up aux sections */
 
 @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(80px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(80px);
   }
-  
-  .fade-in-section {
-    animation-name: fadeInUp;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-      
-    /* Appliquer le fade-up aux titres h2 */
+}
 
- /* Surcharge des styles des h2 pour ajouter un fond uniquement quand il y a un span */
- h2.title-background {
-    position: relative; // Permet le positionnement absolu des pseudo-éléments par rapport à ce h2
-    margin-top: 30px;
-  
-    & > span {
-      display: block;
-      background-image: url('./assets/images/purple_title_bg.png'); // Ajustez le chemin selon votre structure
-      background-repeat: no-repeat;
-      background-size: contain;
-      text-align: center;
-      background-position: center;
-    }
-  
-    &::before {
-      position: absolute;
-      top: 120px;
-      left: -416px;
-      
-    }
-  
-    &::after {
-      position: absolute;
-      top: 377px;
-      left: -372.5px;
-      z-index: 2;
-    }
-  }
-  
-  .story__article {
-    &::before {
-      position: absolute;
-      left: 722px;
-      top: 208px;
-      z-index: 1;
-    }
-  
-    &::after {
-      position: absolute;
-      right: 90px;
-      top: 139px;
-      z-index: 2;
-    }
-  }
+.fade-in-section {
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 
-  #studio {
-    position: relative;
-  
-    h2 {
-      &::after {
-        position: absolute;
-        left: 1217px;
-        top: 107px;
-      }
-  
-      &::before {
-        position: absolute;
-        left: -68px;
-        top: 0;
-      }
-    }
-  }
-  
-   
+/* Appliquer un effet de parallax avec l'image de la bannière et le logo */
 
+.banner {
+  position:relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
-
-  
-  
-
-  
-  
-  
-  
-
-
-
-  
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

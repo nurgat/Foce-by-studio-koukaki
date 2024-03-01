@@ -18,9 +18,11 @@ function theme_enqueue_scripts_and_styles() {
     // GSAP
     wp_enqueue_script('gsap-js', get_stylesheet_directory_uri() . '/node_modules/gsap/dist/gsap.min.js', array(), false, true);
 
-    // SIMPLE-PARALLAX
-    //wp_enqueue_script('simple-parallax-js', get_stylesheet_directory_uri() . '/node_modules/simple-parallax-js/dist/simpleParallax.min.js', array(), false, true);
+    // PARALLAX.JS
+    wp_enqueue_script('parallax-js', get_stylesheet_directory_uri() . '/node_modules/parallax-js/dist/parallax.min.js', array(), false, true);
     
+    // SKROLLR
+    wp_enqueue_script('skrollr-js', get_stylesheet_directory_uri() . '/node_modules/skrollr/dist/skrollr.min.js', array(), false, true);
 }
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts_and_styles');

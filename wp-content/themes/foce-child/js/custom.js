@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+     // Initialisation de Skrollr
     AOS.init({
-        // options ici
     });
+
+    // Initialisation de Skrollr
+    var s = skrollr.init()
+
 });
