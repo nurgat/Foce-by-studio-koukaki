@@ -3,6 +3,7 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 
 function theme_enqueue_styles() {
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('foce-child-style', get_stylesheet_directory_uri() . '/css/index.css', array(), '1.0.0');
 }
 
 // Intégration des dépendances
@@ -49,8 +50,6 @@ function foce_child_enqueue_scripts() {
     // Ajoute custom.js
     wp_enqueue_script('foce-child-custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array(), '1.0.0', true);
 
-    // Enregistre et met en file d'attente le fichier CSS compilé du thème enfant
-    wp_enqueue_style('foce-child-style', get_stylesheet_directory_uri() . '/css/index.css', array(), '1.0.0');
 }
 
 // Ajoute l'action pour exécuter la fonction définie ci-dessus

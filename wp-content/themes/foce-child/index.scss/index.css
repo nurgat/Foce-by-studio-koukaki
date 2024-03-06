@@ -1,0 +1,183 @@
+@charset "UTF-8";
+/* Fleur qui tourne en continu */
+@keyframes flowerRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.story__article::before {
+  position: absolute;
+  left: 722px;
+  top: 208px;
+  z-index: 1;
+}
+.story__article::after {
+  content: "";
+  position: absolute;
+  left: 1137px;
+  top: 122px;
+  width: 188px;
+  height: 188px;
+  background-image: url(../images/Hibiscus.png);
+  z-index: 2;
+  animation: flowerRotate infinite 10s linear;
+}
+
+#studio {
+  position: relative;
+}
+#studio h2 {
+  background-image: url(../images/purple_studio_bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#studio h2::after {
+  position: absolute;
+  left: 1217px;
+  top: 107px;
+}
+#studio h2::before {
+  position: absolute;
+  left: -68px;
+  top: 0;
+}
+
+.site-footer::before {
+  display: none;
+}
+
+.site-footer::after {
+  display: none;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Gotham-Light.otf") format("opentype");
+}
+#festival-nomination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+#festival-nomination .descriptive-text {
+  max-width: 729px;
+  min-height: 399px;
+  margin-left: 216px;
+  position: relative;
+}
+#festival-nomination .descriptive-text::before {
+  content: "";
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: 19px;
+  left: -78px;
+  background-image: url(../images/Sunflower.png);
+  background-size: cover;
+}
+#festival-nomination .descriptive-text::after {
+  content: "";
+  width: 172px;
+  height: 168px;
+  position: absolute;
+  top: -18px;
+  right: -551px;
+  background-image: url(../images/orchid.png);
+  background-size: cover;
+}
+#festival-nomination .descriptive-text__img {
+  width: 100%;
+  height: auto;
+  margin-top: 150px;
+}
+#festival-nomination .descriptive-text__span {
+  position: absolute;
+  top: 199px;
+  left: 67px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 53px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  font-family: "Quicksand", sans-serif;
+  color: #FFF5E9;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#festival-nomination .logo-oscar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#festival-nomination .logo-oscar__img {
+  position: absolute;
+  bottom: -100px;
+  right: 179px;
+  width: 300px;
+  height: 128px;
+}
+
+/* Appliquer le fade-up aux sections */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(120px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.fade-in-section {
+  animation: fadeInUp 2s forwards 0.4s ease-out;
+}
+
+/* Appliquer un effet de parallax avec l'image de la bannière et le logo */
+/*.banner {
+  position:relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+} */
+/* Integrer la video dans le header et la personnaliser */
+.hero-header {
+  position: relative;
+  width: 100%;
+  min-height: 806px;
+  overflow: hidden;
+}
+.hero-header #background-video {
+  position: relative; /* Assure que la vidéo reste en arrière-plan */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero-header .hero-logo {
+  position: absolute;
+  top: 40px;
+  left: 303px;
+  animation: float 1.5s ease-in-out infinite alternate;
+}
+
+/* Flottement du titre dans la vidéo de la bannière */
+@keyframes float {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
