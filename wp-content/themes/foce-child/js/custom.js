@@ -1,7 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-
-     // Initialisation de Skrollr
-   
+document.addEventListener("DOMContentLoaded", function() {  
     AOS.init({
         duration: 1200, // valeurs en millisecondes
         delay: 100, // valeurs en millisecondes
@@ -9,9 +6,4 @@ document.addEventListener("DOMContentLoaded", function() {
         anchorPlacement: 'top-bottom', // définit comment les éléments sont déclenchés (quand le haut de l'élément est en bas du viewport)
         once: true, // animation ne se joue qu'une fois - quand l'élément apparaît dans le viewport
     });
-    
-
-    // Initialisation de Skrollr
-    var s = skrollr.init()
-
 });

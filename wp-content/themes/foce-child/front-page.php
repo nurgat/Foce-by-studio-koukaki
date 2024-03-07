@@ -7,11 +7,14 @@ get_header();
 
         <section class="hero-header">
     
-        <video id="background-video" autoplay loop muted>
+        <video id="background-video" autoplay loop muted class="hero-header__video">
             <source src="<?php echo get_stylesheet_directory_uri(); ?>/video/Studio+Koukaki-vidéo+header+sans+son+(1).mp4" type="video/mp4">
         </video>
 
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" class= "hero-logo" >
+        <!-- Image de secours pour les appareils mobiles ou lorsque la vidéo ne peut pas être chargée -->
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner.png" alt="Image de secours" class="fallback-image">
+
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" class= "hero-header__hero-logo" >
 
         </section>
         <section id="story" class="story fade-in-trigger"> 

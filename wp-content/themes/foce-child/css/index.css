@@ -45,11 +45,7 @@
   top: 0;
 }
 
-.site-footer::before {
-  display: none;
-}
-
-.site-footer::after {
+.site-footer::before, .site-footer::after {
   display: none;
 }
 
@@ -152,21 +148,33 @@
 /* Integrer la video dans le header et la personnaliser */
 .hero-header {
   position: relative;
-  width: 100%;
-  min-height: 806px;
+  height: 806px;
   overflow: hidden;
 }
-.hero-header #background-video {
-  position: relative; /* Assure que la vidéo reste en arrière-plan */
+.hero-header__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-.hero-header .hero-logo {
+@media (max-width: 767px) {
+  .hero-header__video {
+    display: none;
+  }
+}
+.hero-header__hero-logo {
   position: absolute;
   top: 40px;
   left: 303px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
   animation: float 1.5s ease-in-out infinite alternate;
 }
 
@@ -177,6 +185,125 @@
   }
   to {
     transform: translateY(0);
+  }
+}
+@media (max-width: 767px) {
+  .hero-header {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .hero-header video {
+    display: none;
+  }
+  .hero-header img.fallback-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .hero-header img.hero-header__hero-logo {
+    animation: none;
+    width: 82vw;
+    height: auto;
+    min-width: 250px;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  #story h2 {
+    font-size: 29px;
+    margin-top: 20px;
+  }
+  #story h2::before, #story h2::after {
+    display: none;
+  }
+  #story .story__article::before, #story .story__article::after {
+    display: none;
+  }
+  #story #characters {
+    margin: 0;
+  }
+  #story #characters .main-character h3 {
+    font-size: 29px;
+    line-height: 28px;
+  }
+  #story #place div h3 {
+    font-size: 29px;
+  }
+  #studio h2 {
+    font-size: 29px;
+    line-height: 28px;
+  }
+  #studio h2::before, #studio h2::after {
+    display: none;
+  }
+  #studio div::before {
+    display: none;
+  }
+  #festival-nomination {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 20px 0;
+  }
+  #festival-nomination .descriptive-text {
+    position: relative;
+    margin: 0;
+  }
+  #festival-nomination .descriptive-text::before {
+    content: "";
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    top: 25px;
+    left: 14px;
+    background-image: url(../images/Sunflower.png);
+    background-size: cover;
+  }
+  #festival-nomination .descriptive-text::after {
+    content: "";
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 585px;
+    right: 0;
+    /* z-index: -1; */
+    background-image: url(../images/orchid.png);
+    background-size: cover;
+  }
+  #festival-nomination .descriptive-text img {
+    margin-top: 230px;
+    height: 176px;
+  }
+  #festival-nomination .descriptive-text span {
+    position: absolute;
+    top: 272px;
+    left: 20px;
+    text-align: center;
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    font-family: "Quicksand", sans-serif;
+    color: #FFF5E9;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  #festival-nomination .logo-oscar img {
+    width: 250px;
+    height: 107px;
+    position: unset;
+  }
+  .fade-in-section {
+    animation: none;
+  }
+}
+@media (min-width: 768px) {
+  img.fallback-image {
+    display: none;
   }
 }
 

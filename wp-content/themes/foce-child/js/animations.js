@@ -19,14 +19,20 @@
     });
   });
 
-  /* Appliquer un effet de parallax avec l'image de la bannière et le logo */
-
-  let logoBanner = document.querySelector('.hero-logo')
   
-  window.addEventListener('scroll', () => {
+  /* Effet de parallax */
 
+  // Sélectionner le logo et la vidéo
+let logoBanner = document.querySelector('.hero-header__hero-logo'); // Assurez-vous que la classe est correcte
+let videoBanner = document.querySelector('#background-video'); // Assurez-vous que l'ID est correct
+
+window.addEventListener('scroll', () => {
     let value = window.scrollY;
+    
+    // Ajuster la position du logo en fonction du défilement
+    logoBanner.style.transform = `translateY(${value / 3}px)`; // Le logo descend
 
-    logoBanner.style.marginTop = value / 4.2 + "px";
+    // Ajuster la position de la vidéo en fonction du défilement
+    videoBanner.style.transform = `translateY(-${value / 3}px)`; // La vidéo monte
+});
 
-  })
