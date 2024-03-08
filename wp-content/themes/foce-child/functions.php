@@ -52,6 +52,9 @@ function foce_child_enqueue_scripts() {
 
     // Ajoute characters-caroussel.js
     wp_enqueue_script('foce-child-carousel-js', get_stylesheet_directory_uri() . '/js/characters-carousel.js', array(), '1.0.0', true);
+
+
+    wp_enqueue_script('foce-child-nuage-js', get_stylesheet_directory_uri() . '/js/section-lieu-mouvement-nuage.js', array(), '1.0.0', true);
 }
 
 // Ajoute l'action pour exécuter la fonction définie ci-dessus

@@ -1,4 +1,59 @@
 @charset "UTF-8";
+/* Appliquer le fade-up aux sections */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(120px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.fade-in-section {
+  animation: fadeInUp 2s forwards 0.4s ease-out;
+}
+
+/* Integrer la video dans le header et la personnaliser */
+.hero-header {
+  position: relative;
+  height: 806px;
+  overflow: hidden;
+}
+.hero-header__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media (max-width: 767px) {
+  .hero-header__video {
+    display: none;
+  }
+}
+.hero-header__hero-logo {
+  position: absolute;
+  top: 40px;
+  left: 303px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  animation: float 1.5s ease-in-out infinite alternate;
+}
+
+/* Flottement du titre dans la vidéo de la bannière */
+@keyframes float {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 /* Fleur qui tourne en continu */
 @keyframes flowerRotate {
   from {
@@ -53,6 +108,7 @@
   font-family: "Gotham";
   src: url("../fonts/Gotham-Light.otf") format("opentype");
 }
+/* SECTION DES OSCARS */
 #festival-nomination {
   display: flex;
   justify-content: space-between;
@@ -118,19 +174,6 @@
   height: 128px;
 }
 
-/* Appliquer le fade-up aux sections */
-@keyframes fadeInUp {
-  from {
-    transform: translateY(120px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-.fade-in-section {
-  animation: fadeInUp 2s forwards 0.4s ease-out;
-}
-
 /* Appliquer un effet de parallax avec l'image de la bannière et le logo */
 /*.banner {
   position:relative;
@@ -145,48 +188,6 @@
   top: 0;
   left: 0;
 } */
-/* Integrer la video dans le header et la personnaliser */
-.hero-header {
-  position: relative;
-  height: 806px;
-  overflow: hidden;
-}
-.hero-header__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-@media (max-width: 767px) {
-  .hero-header__video {
-    display: none;
-  }
-}
-.hero-header__hero-logo {
-  position: absolute;
-  top: 40px;
-  left: 303px;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  animation: float 1.5s ease-in-out infinite alternate;
-}
-
-/* Flottement du titre dans la vidéo de la bannière */
-@keyframes float {
-  from {
-    transform: translateY(50px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
 @media (max-width: 767px) {
   .hero-header {
     position: relative;
@@ -338,6 +339,45 @@
   width: 100% !important;
   height: 100% !important;
   object-fit: cover;
+}
+
+#place {
+  position: relative;
+  overflow: hidden;
+  height: 500px;
+  max-width: 1473px;
+  margin-left: 0;
+  margin-right: 0;
+}
+#place .parallax-background {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#place .parallax-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#place .nuage {
+  position: absolute;
+  top: 10px;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+#place .nuage img {
+  display: block;
+  max-width: none;
+  height: auto;
+}
+#place .grand-nuage {
+  width: 300px;
+  right: -200px;
+}
+#place .petit-nuage {
+  width: 200px;
+  right: 0px;
 }
 
 /*# sourceMappingURL=index.css.map */
