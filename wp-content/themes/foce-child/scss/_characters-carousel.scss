@@ -1,0 +1,39 @@
+#characters {
+
+    margin:6em;
+    padding: 120px 0 110px;
+    display: flex;
+    flex-direction: column;
+
+    h3{
+      margin-bottom: 80px;
+    }
+
+    &__swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  
+    &__slide {
+      background-position: center;
+      background-size: cover;
+      max-width: 440px !important; 
+      max-height: 440px !important; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      &__img {
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover; 
+      }
+    }
+    /*&__pagination {
+      bottom: 10px;
+      
+    }*/
+  }
+  
