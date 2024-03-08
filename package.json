@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "parallax-js": "^3.1.0",
+    "simple-parallax-js": "^5.6.2",
+    "skrollr": "^0.6.26"
+  }
+}
