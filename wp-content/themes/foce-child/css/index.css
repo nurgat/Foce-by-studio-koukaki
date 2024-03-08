@@ -306,5 +306,38 @@
     display: none;
   }
 }
+#characters {
+  margin: 6em;
+  padding: 120px 0 110px;
+  display: flex;
+  flex-direction: column;
+  /*&__pagination {
+    bottom: 10px;
+
+  }*/
+}
+#characters h3 {
+  margin-bottom: 80px;
+}
+#characters__swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#characters__slide {
+  background-position: center;
+  background-size: cover;
+  max-width: 440px !important;
+  max-height: 440px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#characters__slide__img {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=index.css.map */
