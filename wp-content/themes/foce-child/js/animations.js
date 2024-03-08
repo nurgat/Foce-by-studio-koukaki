@@ -30,9 +30,9 @@ window.addEventListener('scroll', () => {
     let value = window.scrollY;
     
     // Ajuster la position du logo en fonction du défilement
-    logoBanner.style.transform = `translateY(${value / 3}px)`; // Le logo descend
+    logoBanner.style.transform = `translateY(${value / 1.5}px)`; // Le logo descend
 
     // Ajuster la position de la vidéo en fonction du défilement
-    videoBanner.style.transform = `translateY(-${value / 3}px)`; // La vidéo monte
+    videoBanner.style.transform = `translateY(-${value / 1.5}px)`; // La vidéo monte
 });
 
