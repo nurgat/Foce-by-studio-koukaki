@@ -1,19 +1,4 @@
-/* Appliquer le fade-up aux sections */
 
-@keyframes fadeInUp {
-  from {
-    
-    transform: translateY(120px);
-  }
-  to {
-    
-    transform: translateY(0);
-  }
-}
-
-.fade-in-section {
-  animation: fadeInUp 2s forwards 0.4s ease-out;
-}
 
 /* Integrer la video dans le header et la personnaliser */
 
@@ -73,6 +58,7 @@
 
 .story__article {
 
+  #characters{  
   &::before {
     position: absolute;
     left: 722px;
@@ -90,6 +76,7 @@
     background-image: url(../images/Hibiscus.png);
     z-index: 2;
     animation: flowerRotate infinite 10s linear;
+    }
   }
 }
 
