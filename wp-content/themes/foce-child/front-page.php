@@ -37,13 +37,11 @@ get_header();
             <!-- AJOUT TEMPLATE CAROUSEL -->
             <?php get_template_part('partials/characters-carousel');?>
 
-            <article id="place" class="fade-in-trigger">
-                <div>
-                    <h3>Le Lieu</h3>
-                    <p><?php echo get_theme_mod('place'); ?></p>
-                </div>
+            <!-- SECTION LIEU - MOUVEMENT NUAGE -->
+            <?php get_template_part('section-lieu-mouvement-nuage');?>
 
-            </article>
+            
+
         </section>
 
 
@@ -55,7 +53,7 @@ get_header();
             </div>
             </section>
 
-            <!-- SECTION NOMINATION -->
+            <!-- SECTION NOMINATION DES OSCARS -->
             <?php  get_template_part('section-nomination'); ?>
 
     </main><!-- #main -->
