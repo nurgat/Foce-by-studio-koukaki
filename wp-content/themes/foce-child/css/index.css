@@ -1,17 +1,4 @@
 @charset "UTF-8";
-/* Appliquer le fade-up aux sections */
-@keyframes fadeInUp {
-  from {
-    transform: translateY(120px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-.fade-in-section {
-  animation: fadeInUp 2s forwards 0.4s ease-out;
-}
-
 /* Integrer la video dans le header et la personnaliser */
 .hero-header {
   position: relative;
@@ -63,13 +50,13 @@
     transform: rotate(360deg);
   }
 }
-.story__article::before {
+.story__article #characters::before {
   position: absolute;
   left: 722px;
   top: 208px;
   z-index: 1;
 }
-.story__article::after {
+.story__article #characters::after {
   content: "";
   position: absolute;
   left: 1137px;
@@ -341,43 +328,35 @@
   object-fit: cover;
 }
 
-#place {
+.story #place {
+  background-image: none;
   position: relative;
-  overflow: hidden;
-  height: 500px;
-  max-width: 1473px;
+  max-height: 699px;
+  max-width: 1480px;
   margin-left: 0;
-  margin-right: 0;
 }
-#place .parallax-background {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-#place .parallax-background img {
+.story #place #image-fond {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-#place .nuage {
   position: absolute;
-  top: 10px;
-  transform: translateY(-50%);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.story #place #grand-nuage {
+  position: absolute;
+  top: 61px;
+  right: -725px;
   z-index: 2;
+  opacity: 0.3;
 }
-#place .nuage img {
-  display: block;
-  max-width: none;
-  height: auto;
-}
-#place .grand-nuage {
-  width: 300px;
-  right: -200px;
-}
-#place .petit-nuage {
-  width: 200px;
-  right: 0px;
+.story #place #petit-nuage {
+  position: absolute;
+  bottom: 372px;
+  right: 55px;
+  z-index: 2;
+  opacity: 0.2;
 }
 
 /*# sourceMappingURL=index.css.map */

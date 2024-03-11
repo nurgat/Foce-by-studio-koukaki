@@ -14,10 +14,10 @@ get_header();
         <!-- Image de secours pour les appareils mobiles ou lorsque la vidéo ne peut pas être chargée -->
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/banner.png" alt="Image de secours" class="fallback-image">
 
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" class= "hero-header__hero-logo">
+        <img src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants" class= "hero-header__hero-logo" data-0="transform: translate3d(0px,0px,0px);" data-500="transform: translate3d(0px,200px,0px);">
 
         </section>
-        <section id="story" class="story"  data-aos="slide-up" data-aos-duration="2000" data-aos-delay="100"> 
+        <section id="story" class="story"  data-aos="slide-up" data-aos-duration="2000" data-aos-delay="400"> 
         <h2>L'histoire</h2>
 
             <article id="" class="story__article">
@@ -45,7 +45,7 @@ get_header();
         </section>
 
 
-        <section id="studio"  data-aos="slide-up" data-aos-duration="2000" data-aos-delay="100"> 
+        <section id="studio"  data-aos="slide-up" data-aos-duration="2000" data-aos-delay="400"> 
             <h2>Studio Koukaki</h2>
             <div>
                 <p>Acteur majeur de l’animation, Koukaki est un studio intégré fondé en 2012 qui créé, produit et distribue des programmes originaux dans plus de 190 pays pour les enfants et les adultes. Nous avons deux sections en activité : le long métrage et le court métrage. Nous développons des films fantastiques, principalement autour de la culture de notre pays natal, le Japon.</p>
